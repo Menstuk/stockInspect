@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title%}
+    Stocks Table
+{% endblock %}
+
+{% block body %}
+<table class="table my-4">
+    <thead>
+        <tr>
+            <th scope="col">Stock Ticker</th>
+            <th scope="col">Date</th>
+            <th scope="col">Today Price</th>
+            <th scope="col">Predicted Tomorrow Price</th>
+        </tr>
+    </thead>
+    <tbody>
+         {% for stock in data %}
+        <tr>
+                <th scope="row">{{stock.id}}</th>
+                <td>{{stock.date}}</td>
+                <td>{{stock.close_price}}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+{% endblock %}
