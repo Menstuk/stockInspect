@@ -9,7 +9,6 @@
     <thead>
         <tr>
             <th scope="col">Stock Ticker</th>
-            <th scope="col">Date</th>
             <th scope="col">Today Price</th>
             <th scope="col">Predicted Tomorrow Price</th>
         </tr>
@@ -17,9 +16,9 @@
     <tbody>
          {% for stock in data %}
         <tr>
-                <th scope="row">{{stock.id}}</th>
-                <td>{{stock.date}}</td>
-                <td>{{stock.close_price}}</td>
+                <th scope="row">{{stock.ticker}}</th>
+                <td>{{stock.closing_price}}</td>
+                <td>{{stock.prediction}}</td>
         </tr>
         {% endfor %}
 
